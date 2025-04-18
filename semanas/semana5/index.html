@@ -1,29 +1,36 @@
 <!DOCTYPE html>
+<!-- Página web para MielPura - Apiario Emmanuel -->
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MielPura - Dulzura Natural - Apiario Emmanuel</title>
+    <!-- Enlace al archivo CSS -->
     <link rel="stylesheet" href="/assets/css/stylesemana5.css">
+    <!-- Enlace a la librería de iconos Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Cabecera de la página -->
     <header>
+        <!-- Barra de navegación -->
         <nav>
+            <!-- Logo de la empresa -->
             <div class="logo">
                 <img src="/assets/img/imgSemana5/logo/imglogo-sinfondo.png" alt="Logotipo">
-
             </div>
+            <!-- Título de la empresa -->
             <div class="titulo">
                 <h1>MielPura</h1>
                 <h2>Apiario Emmanuel</h2>
-
             </div>
+            <!-- Botón para mostrar/ocultar el menú en dispositivos móviles -->
             <div class="menu-toggle" id="mobile-menu">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+            <!-- Enlaces de navegación -->
             <div class="nav-links">
                 <a href="#inicio">Inicio</a>
                 <a href="#productos">Productos</a>
@@ -33,55 +40,68 @@
         </nav>
     </header>
 
+    <!-- Sección de inicio -->
     <section id="inicio" class="hero">
         <div class="hero-content">
             <h1>Miel Natural</h1>
             <h2>Directo de la Colmena a tu Mesa</h2>
             <p>Disfruta del sabor auténtico de la naturaleza en cada gota</p>
+            <!-- Botón para comprar -->
             <button class="cta-btn" id="comprar-btn">Comprar Ahora</button>
         </div>
     </section>
 
+    <!-- Sección de productos -->
     <section id="productos" class="productos">
         <h2>Nuestros Productos</h2>
         <div class="productos-container">
+            <!-- Tarjeta de producto 1 -->
             <div class="producto-card">
                 <img src="/assets/img/imgSemana5/miel/img1klmiel.webp" alt="Miel de Flores 1kl">
                 <h3>Miel de Flores 1kl</h3>
                 <p>Delicada y aromática, perfecta para endulzar tés y postres.</p>
-<p class="precio">CLP$8.990</p>
+                <p class="precio">CLP$8.990</p>
+                <!-- Botón para añadir al carrito -->
                 <button class="comprar-producto" data-id="1">Añadir al carrito</button>
             </div>
+            <!-- Tarjeta de producto 2 -->
             <div class="producto-card">
                 <img src="/assets/img/imgSemana5/miel/img1klmielbosque.jpg" alt="Miel de Bosque 1kl">
                 <h3>Miel de Bosque 1kl</h3>
                 <p>Sabor intenso y oscuro, ideal para combinar con quesos.</p>
-<p class="precio">CLP$10.990</p>
+                <p class="precio">CLP$10.990</p>
+                <!-- Botón para añadir al carrito -->
                 <button class="comprar-producto" data-id="2">Añadir al carrito</button>
             </div>
+            <!-- Tarjeta de producto 3 -->
             <div class="producto-card">
                 <img src="/assets/img/imgSemana5/miel/img200grmiel.webp" alt="Miel con Panal 200gr">
                 <h3>Miel con Panal 200gr</h3>
                 <p>La experiencia completa de la colmena en tu mesa.</p>
-<p class="precio">CLP$12.990</p>
+                <p class="precio">CLP$12.990</p>
+                <!-- Botón para añadir al carrito -->
                 <button class="comprar-producto" data-id="3">Añadir al carrito</button>
             </div>
         </div>
     </section>
 
+    <!-- Sección de beneficios -->
     <section id="beneficios" class="beneficios">
         <h2>Beneficios de Nuestra Miel</h2>
         <div class="beneficios-container">
+            <!-- Beneficio 1 -->
             <div class="beneficio">
                 <i class="fas fa-leaf"></i>
                 <h3>100% Natural</h3>
                 <p>Sin aditivos ni conservantes, solo miel pura.</p>
             </div>
+            <!-- Beneficio 2 -->
             <div class="beneficio">
                 <i class="fas fa-heartbeat"></i>
                 <h3>Saludable</h3>
                 <p>Rica en antioxidantes y propiedades antibacterianas.</p>
             </div>
+            <!-- Beneficio 3 -->
             <div class="beneficio">
                 <i class="fas fa-seedling"></i>
                 <h3>Sostenible</h3>
@@ -90,25 +110,32 @@
         </div>
     </section>
 
+    <!-- Sección de contacto -->
     <section id="contacto" class="contacto">
         <h2>¿Tienes alguna pregunta?</h2>
         <div class="contacto-container">
+            <!-- Formulario de contacto -->
             <form id="contacto-form">
+                <!-- Campo de nombre -->
                 <div class="input-group">
                     <label for="nombre">Nombre</label>
                     <input type="text" id="nombre" required>
                 </div>
+                <!-- Campo de email -->
                 <div class="input-group">
                     <label for="email">Email</label>
                     <input type="email" id="email" required>
                 </div>
+                <!-- Campo de mensaje -->
                 <div class="input-group">
                     <label for="mensaje">Mensaje</label>
                     <textarea id="mensaje" rows="4" required></textarea>
                 </div>
+                <!-- Botón para enviar el mensaje -->
                 <button type="submit" class="submit-btn">Enviar Mensaje</button>
             </form>
 
+            <!-- Información de contacto -->
             <div class="info-contacto">
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
@@ -122,6 +149,7 @@
                     <i class="fas fa-envelope"></i>
                     <p>info@mielpura.com</p>
                 </div>
+                <!-- Enlaces a redes sociales -->
                 <div class="redes-sociales">
                     <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
                     <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
@@ -131,10 +159,12 @@
         </div>
     </section>
 
+    <!-- Botón para contactar -->
     <div class="contactame-container">
         <button id="contactame-btn" class="contactame-btn">Contáctame</button>
     </div>
 
+    <!-- Pie de página -->
     <footer>
         <div class="footer-container">
             <div class="footer-column">
@@ -161,6 +191,7 @@
         </div>
     </footer>
 
+    <!-- Modal para el carrito de compras -->
     <div id="cart-modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -175,6 +206,7 @@
         </div>
     </div>
 
+    <!-- Enlace al archivo JavaScript -->
     <script src="/assets/js/scriptsemana5.js"></script>
 </body>
 </html>
