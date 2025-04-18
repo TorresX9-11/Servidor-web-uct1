@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio de Proyectos</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navegación fija -->
+    <nav>
+        <ul>
+            <li><a href="#" class="nav-link active" data-page="home">Inicio</a></li>
+            <li><a href="#" class="nav-link" data-page="semana1">Semana 1</a></li>
+            <li><a href="#" class="nav-link" data-page="semana2">Semana 2</a></li>
+            <li><a href="/semanas/semana3/index.html" class="nav-link" data-page="semana3">Semana 3</a></li>
+            <li><a href="#" class="nav-link" data-page="semana4">Semana 4</a></li>
+            <li><a href="/semanas/semana5/index.html" class="nav-link" data-page="semana5">Semana 5</a></li>
+            <li><a href="#" class="nav-link" data-page="semana6">Semana 6</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <div class="container" id="main-content">
+        <!-- Sección de inicio -->
+        <div class="home-section" id="home-content">
+            <div class="profile-container">
+                <img src="assets/img/imgPerfil/imgPerfil.jpg" alt="Mi foto de perfil" class="profile-photo">
+                <div class="profile-info">
+                    <h1>Emanuel Leandro Torres Troncoso</h1>
+                    <p>Desarrollador Web | Diseñador | Creativo</p>
+                    <p>Bienvenido a mi portafolio de proyectos. Aquí podrás encontrar mi trabajo organizado por semanas, mostrando mi progreso y desarrollo en diferentes áreas.</p>
+                </div>
+            </div>
+
+            <div class="instructions">
+                <h2>Cómo navegar por este portafolio</h2>
+                <p>Esta página funciona como un contenedor para todos mis proyectos:</p>
+                <ul>
+                    <li>Utiliza el menú de navegación en la parte superior para explorar los diferentes proyectos por semana.</li>
+                    <li>Desplázate por el carrusel de proyectos debajo para ver información detallada sobre cada uno.</li>
+                    <li>Cada proyecto está completamente integrado y funcional dentro de esta plataforma.</li>
+                    <li>Puedes volver a esta página de inicio en cualquier momento haciendo clic en "Inicio".</li>
+                </ul>
+                <p>¡Gracias por visitar mi portafolio! Espero que disfrutes explorando mi trabajo.</p>
+            </div>
+
+            <!-- Slider de proyectos -->
+            <div class="projects-slider-container">
+                <h2 class="projects-slider-title">Mis Proyectos</h2>
+                <div class="slider">
+                    <div class="slides" id="slides">
+                        <!-- Slide Semana 1 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h3>Proyecto Semana 1</h3>
+                                <h4>..</h4>
+                                <p>Este proyecto se enfoca en los fundamentos de HTML y CSS. Aquí desarrollé una página web estática aplicando conceptos básicos de estructura, diseño y estilo.</p>
+                                <p>Tecnologías: HTML5, CSS3</p>
+                                <a href="#" class="slide-btn" data-project="semana1">Ver Proyecto</a>
+                            </div>
+                        </div>
+                        <!-- Slide Semana 2 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h3>Proyecto Semana 2</h3>
+                                <h4>..</h4>
+                                <p>En esta semana exploré conceptos más avanzados de CSS como Flexbox y Grid. Implementé un diseño responsive que se adapta a diferentes tamaños de pantalla.</p>
+                                <p>Tecnologías: HTML5, CSS3 avanzado</p>
+                                <a href="#" class="slide-btn" data-project="semana2">Ver Proyecto</a>
+                            </div>
+                        </div>
+                        <!-- Slide Semana 3 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h3>Proyecto Semana 3</h3>
+                                <h4>Mi Portafolio</h4>
+                                <p>Este es mi portafolio web, es mi espacio personal para mostrar mis proyectos y habilidades en este mundo digital.</p>
+                                <p>Tecnologías: HTML, CSS y JavaScript</p>
+                                <a href="#" class="slide-btn" data-project="semana3">Ver Proyecto</a>
+                            </div>
+                        </div>
+                        <!-- Slide Semana 4 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h3>Proyecto Semana 4</h3>
+                                <h4>..</h4>
+                                <p>Este es mi portafolio web, es mi espacio personal para mostrar mis proyectos y habilidades en este mundo digital.</p>
+                                <p>Tecnologías: HTML, CSS y JavaScript</p>
+                                <a href="#" class="slide-btn" data-project="semana4">Ver Proyecto</a>
+                            </div>
+                        </div>
+                        <!-- Slide Semana 5 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h3>Proyecto Semana 5</h3>
+                                <h4>Landin page</h4>
+                                <p>Landing page diseñada con la finalidad de ofrecer un producto (miel) y que el usuario (cliente) navegue en ella sin problemas, con un formulario de contacto para posibles preguntas.</p>
+                                <p>Tecnologías:HTML, CSS y JavaScript</p>
+                                <a href="#" class="slide-btn" data-project="semana5">Ver Proyecto</a>
+                            </div>
+                        </div>
+                        <!-- Slide Semana 6 -->
+                        <div class="slide">
+                            <div class="slide-content">
+                                <h3>Proyecto Semana 6</h3>
+                                <h4>..</h4>
+                                <p>Proyecto final donde integré todas las tecnologías aprendidas. Incluye autenticación de usuarios, persistencia de datos y funcionalidades avanzadas.</p>
+                                <p>Tecnologías: Full Stack</p>
+                                <a href="#" class="slide-btn" data-project="semana6">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Flechas de navegación del slider -->
+                    <div class="slider-arrows">
+                        <div class="slider-arrow prev-arrow" id="prev-slide">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                            </svg>
+                        </div>
+                        <div class="slider-arrow next-arrow" id="next-slide">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Puntos de navegación del slider -->
+                <div class="slider-controls">
+                    <div class="slider-dot active" data-slide="0"></div>
+                    <div class="slider-dot" data-slide="1"></div>
+                    <div class="slider-dot" data-slide="2"></div>
+                    <div class="slider-dot" data-slide="3"></div>
+                    <div class="slider-dot" data-slide="4"></div>
+                    <div class="slider-dot" data-slide="5"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Contenedor para cargar proyectos -->
+        <iframe id="project-container" style="display: none;" frameborder="0"></iframe>
+    </div>
+    <script src="assets/js/sccrip.js"></script>
+</body>
+</html>
