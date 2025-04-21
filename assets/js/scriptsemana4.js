@@ -47,7 +47,7 @@ function calcular() {
 
     historial.push(`${operando1} ${operador} ${operando2} = ${resultado}`); // Guarda la operación en el historial
     mostrarHistorial(); // Muestra el historial actualizado
-    // guardarHistorial(); // Guarda el historial en localStorage
+    guardarHistorial(); // Guarda el historial en localStorage
     display.value = resultado; // Muestra el resultado en el display
     operando1 = null; // Restablece las variables
     operando2 = null;
