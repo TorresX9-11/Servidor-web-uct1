@@ -204,7 +204,8 @@ nav ul li a.active {
     width: 100%; /* Ancho completo */
     height: 100%; /* Alto completo */
     border: none; /* Sin borde */
-    min-height: 700px; /* Altura mínima */
+    min-height: 1000px; /* Altura mínima */
+    max-height: 1000px; /* Altura máxima */
     border-radius: 12px; /* Bordes redondeados */
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra sutil */
 }
@@ -215,7 +216,10 @@ nav ul li a.active {
     max-width: 900px; /* Ancho máximo */
     margin: 0 auto 3rem; /* Márgenes */
     position: relative; /* Posicionamiento relativo */
+    background: linear-gradient(135deg, #8d9cf38e 90%, #825ee452 100%);
+    border-radius: 12px; /* Bordes redondeados */
 }
+
 
 /* Título del slider de proyectos */
 .projects-slider-title {
@@ -298,7 +302,8 @@ nav ul li a.active {
 .slider-controls {
     display: flex; /* Permite usar flexbox para el diseño */
     justify-content: center; /* Centra los elementos horizontalmente */
-    margin-top: 1.5rem; /* Espacio superior */
+    margin-top: 0.7rem; /* Espacio superior */
+    margin-bottom: 0.7rem; /* Espacio inferior */
 }
 
 /* Cada punto del slider */

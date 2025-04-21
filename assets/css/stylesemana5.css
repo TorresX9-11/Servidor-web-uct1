@@ -334,12 +334,13 @@ textarea {
 }
 
 .social-icon {
+    padding-left: 0.5rem; /* Relleno interno del icono */
     display: inline-flex; /* Distribución en línea de los elementos */
     align-items: center; /* Alineación vertical de los elementos */
     justify-content: center; /* Alineación horizontal de los elementos */
     width: 40px; /* Ancho del icono */
     height: 40px; /* Alto del icono */
-    background-color: #FFC107; /* Color de fondo del icono */
+    background-color: #ffc10757; /* Color de fondo del icono */
     color: #8B5A2B; /* Color del icono */
     border-radius: 50%; /* Bordes redondeados del icono */
     text-decoration: none; /* Elimina la decoración del enlace */
