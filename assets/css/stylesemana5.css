@@ -334,7 +334,7 @@ textarea {
 }
 
 .social-icon {
-    padding-left: 0.5rem; /* Relleno interno del icono */
+    padding-left: 0.1rem; /* Relleno interno del icono */
     display: inline-flex; /* Distribución en línea de los elementos */
     align-items: center; /* Alineación vertical de los elementos */
     justify-content: center; /* Alineación horizontal de los elementos */
