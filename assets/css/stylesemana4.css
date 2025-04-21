@@ -1,0 +1,76 @@
+/* Estilos para la calculadora */
+body {
+    font-family: sans-serif;
+    background-color: #f0f0f0; /* Gris claro de fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.calculadora {
+    background-color: #fff; /* Blanco para la calculadora */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#display {
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.botones {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ddd; /* Gris para los botones */
+    color: #333; /* Gris oscuro para el texto */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #ccc; /* Gris más oscuro al pasar el ratón */
+}
+
+.operacion {
+    background-color: #7fffd4; /* Aqua para los operadores */
+    color: white;
+}
+
+.igual {
+    background-color: #4CAF50; /* Verde para el botón igual */
+    color: white;
+}
+
+#historial-container {
+    width: 200px;
+    margin-left: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f9f9f9; /* Color crema para la libreta */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#historial-container h3 {
+    margin-top: 0;
+}
+
+#historial p {
+    margin: 5px 0;
+}
