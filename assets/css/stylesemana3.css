@@ -3,559 +3,680 @@
     Contiene las variables de color, la tipografía y los estilos generales de la página web.
 */
 
-/* Variables de color y tipografía */
+/* Variables de color y tipografía. Se usan variables CSS para facilitar el mantenimiento y la consistencia.*/
 :root {
-    --primary-color: #64ffda; /* Color principal */
-    --secondary-color: #0a192f; /* Color secundario */
-    --light-color: #ccd6f6; /* Color claro */
-    --dark-color: #112240; /* Color oscuro */
-    --text-color: #8892b0; /* Color del texto */
-    --heading-color: #e6f1ff; /* Color de los encabezados */
-    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace; /* Fuente monoespaciada */
-    --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', sans-serif; /* Fuente sans-serif */
+    --primary-color: #64ffda;
+    --secondary-color: #0a192f;
+    --light-color: #ccd6f6;
+    --dark-color: #112240;
+    --text-color: #8892b0;
+    --heading-color: #e6f1ff;
+    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+    --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', helvetica, sans-serif;
 }
 
 /* Reset y estilos base - Resetear estilos por defecto del navegador */
 * {
-    margin: 0; /* Eliminar márgenes predeterminados */
-    padding: 0; /* Eliminar padding predeterminados */
-    box-sizing: border-box; /* Incluir padding y border en el ancho y alto del elemento */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 /* Estilos para el cuerpo de la página */
 body {
-    font-family: var(--font-sans); /* Fuente sans-serif */
-    background-color: var(--secondary-color); /* Color de fondo */
-    color: var(--text-color); /* Color del texto */
-    line-height: 1.6; /* Interlineado */
-    padding: 0; /* Eliminar padding */
+    font-family: var(--font-sans);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 0;
 }
 /* Estilos para el contenedor principal */
 .container {
-    max-width: 1200px; /* Ancho máximo del contenedor */
-    margin: 0 auto; /* Centra horizontalmente el contenedor */
-    padding: 0 20px; /* Espacio interior */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 /* Estilos para los enlaces */
 a {
-    text-decoration: none; /* Eliminar la decoración del enlace */
-    color: var(--primary-color); /* Color del enlace */
-    transition: all 0.3s ease; /* Transición suave para las animaciones */
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: all 0.3s ease;
 }
 /* Estilos para los enlaces al pasar el cursor */
 a:hover {
-    color: var(--primary-color); /* Color del enlace al pasar el ratón */
-    opacity: 0.8; /* Opacidad al pasar el ratón */
+    color: var(--primary-color);
+    opacity: 0.8;
 }
 /* Estilos para el botón "Contáctame" */
 .btn {
-    display: inline-block; /* Formato en línea */
-    background: transparent; /* Fondo transparente */
-    color: var(--primary-color); /* Color del texto */
-    border: 1px solid var(--primary-color); /* Borde */
-    padding: 12px 20px; /* Espacio interior */
-    border-radius: 4px; /* Bordes redondeados */
-    font-size: 14px; /* Tamaño de la fuente */
-    font-family: var(--font-mono); /* Fuente monoespaciada */
-    cursor: pointer; /* Cursor de puntero */
-    transition: all 0.3s ease; /* Transición suave para las animaciones */
+    display: inline-block;
+    background: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: var(--font-mono);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 /* Estilos para el botón "Contáctame" al pasar el cursor */
 .btn:hover {
-    background: rgba(100, 255, 218, 0.1); /* Fondo con transparencia al pasar el ratón */
+    background: rgba(100, 255, 218, 0.1);
 }
 
 
 /* Estilos para la cabecera.  Se incluye -webkit-backdrop-filter para compatibilidad con navegadores webkit */
 .header {
-    position: fixed; /* Posición fija en la pantalla */
-    top: 0; /* Posición en la parte superior */
-    left: 0; /* Posición a la izquierda */
-    right: 0; /* Posición a la derecha */
-    background-color: rgba(10, 25, 47, 0.9); /* Color de fondo con transparencia */
-    backdrop-filter: blur(10px); /* Efecto de desenfoque */
-    -webkit-backdrop-filter: blur(10px); /* Efecto de desenfoque para navegadores webkit */
-    z-index: 100; /* Índice z alto para que esté encima de otros elementos */
-    height: 80px; /* Alto de la cabecera */
-    display: flex; /* Permite usar flexbox para el diseño */
-    align-items: center; /* Alinea los elementos al centro verticalmente */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(10, 25, 47, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 100;
+    height: 80px;
+    display: flex;
+    align-items: center;
 }
 /* Estilos para el logo */
 header img {
-    max-width: 50px; /* Ancho máximo del logo */
+    max-width: 50px;
 }
 
 /* Estilos para la navegación */
 .nav {
-    display: flex; /* Permite usar flexbox para el diseño */
-    justify-content: space-between; /* Distribuye los elementos uniformemente */
-    align-items: center; /* Alinea los elementos al centro verticalmente */
-    width: 100%; /* Ancho completo */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 /* Estilos para la lista de navegación */
 .nav-list {
-    display: flex; /* Permite usar flexbox para el diseño */
-    list-style: none; /* Eliminar los marcadores de lista */
-    gap: 30px; /* Espacio entre los elementos */
+    display: flex;
+    list-style: none;
+    gap: 30px;
 }
 
 /* Estilos para los enlaces de navegación */
 .nav-list a {
-    color: var(--light-color); /* Color del enlace */
-    font-size: 14px; /* Tamaño de la fuente */
-    font-family: var(--font-mono); /* Fuente monoespaciada */
+    color: var(--light-color);
+    font-size: 14px;
+    font-family: var(--font-mono);
 }
 
 /* Estilos para los enlaces de navegación al pasar el cursor */
 .nav-list a:hover {
-    color: var(--primary-color); /* Color del enlace al pasar el ratón */
+    color: var(--primary-color);
 }
 
 /* Estilos para los elementos de lista de navegación */
 .nav-list li {
-    position: relative; /* Posicionamiento relativo */
+    position: relative;
 }
 
 /* Estilos para el marcador de lista de navegación */
 .nav-list li::before {
-    content: '01.'; /* Contenido del marcador */
-    margin-right: 5px; /* Espacio a la derecha */
-    color: var(--primary-color); /* Color del marcador */
-    font-family: var(--font-mono); /* Fuente monoespaciada */
-    font-size: 12px; /* Tamaño de la fuente */
+    content: '01.';
+    margin-right: 5px;
+    color: var(--primary-color);
+    font-family: var(--font-mono);
+    font-size: 12px;
 }
 
 /* Estilos para el botón de menú */
 .menu-toggle {
-    display: none; /* Ocultar el botón de menú por defecto */
-    background: none; /* Fondo transparente */
-    border: none; /* Sin borde */
-    color: var(--primary-color); /* Color del texto */
-    font-size: 24px; /* Tamaño de la fuente */
-    cursor: pointer; /* Cursor de puntero */
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-size: 24px;
+    cursor: pointer;
 }
+
+/* Estilos para el formulario de contacto */
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-form {
+    flex: 1 1 500px;
+    background-color: var(--dark-color);
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.contact-info {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-family: var(--font-mono);
+    color: var(--light-color);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--text-color);
+    border-radius: 4px;
+    color: var(--light-color);
+    font-family: var(--font-sans);
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(100, 255, 218, 0.2);
+}
+
+.error-message {
+    color: #ff6b6b;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    display: block;
+    font-family: var(--font-mono);
+    height: 1rem;
+}
+
+.submit-btn {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: 0.75rem 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: rgba(100, 255, 218, 0.1);
+}
+
+.form-status {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    text-align: center;
+    border-radius: 4px;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    display: none;
+}
+
+.form-status.success {
+    display: block;
+    background-color: rgba(100, 255, 218, 0.1);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.form-status.error {
+    display: block;
+    background-color: rgba(255, 107, 107, 0.1);
+    color: #ff6b6b;
+    border: 1px solid #ff6b6b;
+}
+
 /* Estilos responsive para pantallas menores a 700px */
 @media (max-width: 700px) {
     .menu-toggle {
-        display: block; /* Mostrar el botón de menú en pantallas pequeñas */
+        display: block;
+
     }
     .nav-list.show {
-        display: flex; /* Mostrar la lista de navegación en pantallas pequeñas */
-        flex-direction: column; /* Ordena los elementos verticalmente */
-        position: absolute; /* Posicionamiento absoluto */
-        top: 80px; /* Posición vertical */
-        left: 15px; /* Posición horizontal */
-        width: calc(100% - 30px); /* Ancho de la lista */
-        background-color: rgba(10, 25, 47, 0.652); /* Color de fondo con transparencia */
-        backdrop-filter: blur(5px); /* Efecto de desenfoque */
-        z-index: 1000; /* Índice z alto para que esté encima de otros elementos */
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Altura del header */
+        left: 15px;
+        width: calc(100% - 30px); /* Ajustar ancho para evitar que se salga de la pantalla */
+        background-color: rgba(10, 25, 47, 0.652);
+        backdrop-filter: blur(5px);
+        z-index: 1000;
     }
  
         .nav-list a {
-            margin: 10px 0; /* Espacio entre los elementos */
-            width: 100%; /* Ancho completo */
+            margin: 10px 0;
+            width: 100%;
             text-align: right; /* Alineación a la derecha */
         }
+
+        .contact-container {
+            flex-direction: column;
+        }
+        
+        .contact-form, 
+        .contact-info {
+            flex: 1 1 100%;
+        }
+        
+        .contact-info {
+            align-items: center;
+            text-align: center;
+        }
     }
+
 /* Estilos para la sección Hero */
 .hero {
-    height: 100vh; /* Alto completo de la pantalla */
-    display: flex; /* Permite usar flexbox para el diseño */
-    align-items: center; /* Alinea los elementos al centro verticalmente */
-    padding-top: 80px; /* Espacio superior */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
 }
 
 /* Estilos para el título h1 de la sección Hero */
 .hero h1 {
-    color: var(--primary-color); /* Color del texto */
-    font-size: clamp(24px, 5vw, 32px); /* Tamaño de la fuente adaptable */
-    margin-bottom: 20px; /* Espacio inferior */
-    font-family: var(--font-mono); /* Fuente monoespaciada */
+    color: var(--primary-color);
+    font-size: clamp(24px, 5vw, 32px);
+    margin-bottom: 20px;
+    font-family: var(--font-mono);
 }
 
 /* Estilos para el título h2 de la sección Hero */
 .hero h2 {
-    color: var(--heading-color); /* Color del texto */
-    font-size: clamp(40px, 8vw, 80px); /* Tamaño de la fuente adaptable */
-    margin-bottom: 10px; /* Espacio inferior */
+    color: var(--heading-color);
+    font-size: clamp(40px, 8vw, 80px);
+    margin-bottom: 10px;
 }
 
 /* Estilos para el párrafo de la sección Hero */
 .hero p {
-    max-width: 540px; /* Ancho máximo del párrafo */
-    margin-bottom: 30px; /* Espacio inferior */
-    font-size: 20px; /* Tamaño de la fuente */
+    max-width: 540px;
+    margin-bottom: 30px;
+    font-size: 20px;
 }
 
 /* Estilos comunes para las secciones */
 .section {
-    padding: 100px 0; /* Espacio interior */
+    padding: 100px 0;
 }
 
 /* Estilos para los títulos de sección */
 .section-title {
-    color: var(--heading-color); /* Color del texto */
-    font-size: 32px; /* Tamaño de la fuente */
-    margin-bottom: 40px; /* Espacio inferior */
-    position: relative; /* Posicionamiento relativo */
-    display: inline-block; /* Formato en línea */
-    border-bottom: 1px solid #64ffda; /* Línea debajo del título */
+    color: var(--heading-color);
+    font-size: 32px;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px solid #64ffda; 
 }
 
 /* Estilos para la línea debajo de los títulos de sección */
 .section-title::after {
-    display: block; /* Formato en bloque */
-    width: 300px; /* Ancho de la línea */
-    height: 1px; /* Alto de la línea */
-    background-color: var(--text-color); /* Color de la línea */
-    margin-left: 20px; /* Espacio a la izquierda */
-    position: absolute; /* Posicionamiento absoluto */
-    top: 50%; /* Posición vertical en el centro */
-    transform: translateY(-50%); /* Centra verticalmente la línea */
+    display: block;
+    width: 300px;
+    height: 1px;
+    background-color: var(--text-color);
+    margin-left: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 /* Estilos para la sección "Sobre mí" */
 .about-content {
-    display: flex; /* Permite usar flexbox para el diseño */
-    gap: 50px; /* Espacio entre los elementos */
-    align-items: center; /* Alinea los elementos al centro verticalmente */
+    display: flex;
+    gap: 50px;
+    align-items: center;
 }
 
 /* Estilos para el texto de la sección "Sobre mí" */
 .about-text {
-    flex: 1; /* Ocupa el espacio restante */
+    flex: 1;
 }
 
 /* Estilos para los párrafos de la sección "Sobre mí" */
 .about-text p {
-    margin-bottom: 20px; /* Espacio inferior */
+    margin-bottom: 20px;
 }
 
 /* Estilos para la lista de habilidades */
 .skills-list {
-    display: grid; /* Permite usar grid para el diseño */
-    grid-template-columns: repeat(2, minmax(140px, 200px)); /* Define la cantidad de columnas */
-    gap: 10px; /* Espacio entre los elementos */
-    list-style: none; /* Eliminar los marcadores de lista */
-    margin-top: 20px; /* Espacio superior */
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    gap: 10px;
+    list-style: none;
+    margin-top: 20px;
 }
 
 /* Estilos para los elementos de lista de habilidades */
 .skills-list li {
-    position: relative; /* Posicionamiento relativo */
-    padding-left: 20px; /* Espacio interior */
-    font-family: var(--font-mono); /* Fuente monoespaciada */
-    font-size: 14px; /* Tamaño de la fuente */
+    position: relative;
+    padding-left: 20px;
+    font-family: var(--font-mono);
+    font-size: 14px;
 }
 
 /* Estilos para el marcador de lista de habilidades */
 .skills-list li::before {
-    content: '▹'; /* Contenido del marcador */
-    position: absolute; /* Posicionamiento absoluto */
-    left: 0; /* Posición a la izquierda */
-    color: var(--primary-color); /* Color del marcador */
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
 }
 
 /* Estilos para la imagen de la sección "Sobre mí" */
 .about-image {
-    flex: 1; /* Ocupa el espacio restante */
-    max-width: 300px; /* Ancho máximo de la imagen */
+    flex: 1;
+    max-width: 300px;
 }
 
 /* Estilos para la imagen de perfil */
 .profile-img {
-    width: 100%; /* Ancho completo */
-    border-radius: 5px; /* Bordes redondeados */
-    filter: grayscale(100%) contrast(1); /* Filtro en escala de grises */
-    transition: all 0.3s ease; /* Transición suave para las animaciones */
+    width: 100%;
+    border-radius: 5px;
+    filter: grayscale(100%) contrast(1);
+    transition: all 0.3s ease;
 }
 
 /* Estilos para la imagen de perfil al pasar el cursor */
 .profile-img:hover {
-    filter: none; /* Eliminar el filtro al pasar el ratón */
+    filter: none;
 }
 
 /* Estilos para la sección "Experiencia" */
 .experience-timeline {
-    margin-top: 50px; /* Espacio superior */
+    margin-top: 50px;
 }
 
 /* Estilos para los elementos de la línea de tiempo de experiencia */
 .timeline-item {
-    margin-bottom: 30px; /* Espacio inferior */
+    margin-bottom: 30px;
 }
 
 /* Estilos para los títulos h3 de la línea de tiempo de experiencia */
 .timeline-item h3 {
-    color: var(--heading-color); /* Color del texto */
-    font-size: 22px; /* Tamaño de la fuente */
-    margin-bottom: 5px; /* Espacio inferior */
+    color: var(--heading-color);
+    font-size: 22px;
+    margin-bottom: 5px;
 }
 
 /* Estilos para los títulos h4 de la línea de tiempo de experiencia */
 .timeline-item h4 {
-    color: var(--primary-color); /* Color del texto */
-    font-family: var(--font-mono); /* Fuente monoespaciada */
-    font-size: 16px; /* Tamaño de la fuente */
-    margin-bottom: 10px; /* Espacio inferior */
+    color: var(--primary-color);
+    font-family: var(--font-mono);
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 /* Estilos para las fechas de la línea de tiempo de experiencia */
 .date {
-    display: block; /* Formato en bloque */
-    font-family: var(--font-mono); /* Fuente monoespaciada */
-    font-size: 14px; /* Tamaño de la fuente */
-    margin-bottom: 10px; /* Espacio inferior */
-    color: var(--text-color); /* Color del texto */
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: var(--text-color);
 }
 
 /* Estilos para la sección "Trabajos" */
 .projects-columns {
-    display: flex; /* Permite usar flexbox para el diseño */
-    gap: 30px; /* Espacio entre los elementos */
-    margin-top: 50px; /* Espacio superior */
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
 }
 
 /* Estilos para las columnas de proyectos */
 .project-column {
-    flex: 1; /* Ocupa el espacio restante */
-    display: flex; /* Permite usar flexbox para el diseño */
-    flex-direction: column; /* Ordena los elementos verticalmente */
-    gap: 30px; /* Espacio entre los elementos */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 /* Estilos para las tarjetas de proyectos */
 .project-card {
-    background-color: var(--dark-color); /* Color de fondo */
-    border-radius: 5px; /* Bordes redondeados */
-    overflow: hidden; /* Oculta el contenido que se extiende fuera de la tarjeta */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para las animaciones */
+    background-color: var(--dark-color);
+    border-radius: 5px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Estilos para las tarjetas de proyectos al pasar el cursor */
 .project-card:hover {
-    transform: translateY(-10px); /* Desplazamiento vertical al pasar el ratón */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra al pasar el ratón */
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilos para las imágenes de los proyectos */
 .project-image {
-    height: 200px; /* Alto de la imagen */
-    overflow: hidden; /* Oculta el contenido que se extiende fuera de la imagen */
+    height: 200px;
+    overflow: hidden;
 }
 
 /* Estilos para las imágenes dentro de las tarjetas de proyectos */
 .project-image img {
-    width: 100%; /* Ancho completo */
-    height: 100%; /* Alto completo */
-    object-fit: cover; /* Ajusta la imagen para que cubra todo el contenedor */
-    transition: transform 0.5s ease; /* Transición suave para las animaciones */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
 }
 
 /* Estilos para las imágenes de proyectos al pasar el cursor */
 .project-card:hover .project-image img {
-    transform: scale(1.1); /* Aumenta el tamaño de la imagen al pasar el ratón */
+    transform: scale(1.1);
 }
 
 /* Estilos para la información del proyecto */
 .project-info {
-    padding: 20px; /* Espacio interior */
-    display: inline; /* Formato en línea */
+    padding: 20px;
+    display: inline;
 }
 
 /* Estilos para los títulos h3 de la información del proyecto */
 .project-info h3 {
-    color: var(--heading-color); /* Color del texto */
-    margin-bottom: 10px; /* Espacio inferior */
-    font-size: 20px; /* Tamaño de la fuente */
+    color: var(--heading-color);
+    margin-bottom: 10px;
+    font-size: 20px;
 }
 
 /* Estilos para los párrafos de la información del proyecto */
 .project-info p {
-    margin-bottom: 15px; /* Espacio inferior */
-    font-size: 16px; /* Tamaño de la fuente */
+    margin-bottom: 15px;
+    font-size: 16px;
 }
 
 /* Estilos para los enlaces de los proyectos */
 .project-links {
-    display: flex; /* Permite usar flexbox para el diseño */
-    gap: 15px; /* Espacio entre los elementos */
+    display: flex;
+    gap: 15px;
 }
 
 /* Estilos para los enlaces de los proyectos */
 .project-links a {
-    color: var(--light-color); /* Color del enlace */
-    font-size: 20px; /* Tamaño de la fuente */
-    transition: all 0.3s ease; /* Transición suave para las animaciones */
+    color: var(--light-color);
+    font-size: 20px;
+    transition: all 0.3s ease;
 }
 
 /* Estilos para los enlaces de los proyectos al pasar el cursor */
 .project-links a:hover {
-    color: var(--primary-color); /* Color del enlace al pasar el ratón */
-    transform: translateY(-3px); /* Desplazamiento vertical al pasar el ratón */
+    color: var(--primary-color);
+    transform: translateY(-3px);
 }
 
 /* Estilos responsive para pantallas menores a 768px */
 @media (max-width: 768px) {
     .projects-columns {
-        flex-direction: column; /* Ordena los elementos verticalmente */
+        flex-direction: column;
     }
     .project-column {
-        gap: 20px; /* Espacio entre los elementos */
+        gap: 20px;
     }
 }
 
 /* Estilos para la sección "Contacto" */
 .contact {
-    text-align: center; /* Alinea el texto al centro */
+    text-align: center;
 }
 
 /* Estilos para los párrafos de la sección "Contacto" */
 .contact p {
-    max-width: 600px; /* Ancho máximo del párrafo */
-    margin: 0 auto 30px; /* Márgenes */
+    max-width: 600px;
+    margin: 0 auto 30px;
 }
 
 /* Estilos para los enlaces sociales */
 .social-links {
-    margin-top: 50px; /* Espacio superior */
-    display: flex; /* Permite usar flexbox para el diseño */
-    justify-content: center; /* Centra los elementos horizontalmente */
-    gap: 20px; /* Espacio entre los elementos */
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 /* Estilos para los enlaces sociales */
 .social-links a {
-    color: var(--light-color); /* Color del enlace */
-    font-size: 24px; /* Tamaño de la fuente */
-    transition: all 0.3s ease; /* Transición suave para las animaciones */
+    color: var(--light-color);
+    font-size: 24px;
+    transition: all 0.3s ease;
 }
 
 /* Estilos para los enlaces sociales al pasar el cursor */
 .social-links a:hover {
-    color: var(--primary-color); /* Color del enlace al pasar el ratón */
-    transform: translateY(-5px); /* Desplazamiento vertical al pasar el ratón */
+    color: var(--primary-color);
+    transform: translateY(-5px);
 }
 
 /* Estilos para el pie de página */
 .footer-container {
-    text-align: center; /* Alinea el texto al centro */
-    padding: 20px 0; /* Espacio interior */
-    font-family: var(--font-mono); /* Fuente monoespaciada */
-    font-size: 14px; /* Tamaño de la fuente */
-    background: linear-gradient(to right,#000000, #02135d, #000000); /* Gradiente de fondo */
+    text-align: center;
+    padding: 20px 0;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    background: linear-gradient(to right,#000000, #02135d, #000000);
 }
 
 
 /* Estilos responsive para pantallas menores a 700px */
 @media (max-width: 700px) {
     .nav-list {
-        display: none; /* Ocultar la lista de navegación por defecto */
+        display: none;
     }
     .nav-list.show {
-        display: flex; /* Mostrar la lista de navegación en pantallas pequeñas */
-        flex-direction: column; /* Ordena los elementos verticalmente */
-        position: absolute; /* Posicionamiento absoluto */
-        top: 80px; /* Posición vertical */
-        left: 15px; /* Posición horizontal */
-        width: 100%; /* Ancho completo */
-        background-color: rgba(10, 25, 47, 0.9); /* Color de fondo con transparencia */
-        z-index: 1000; /* Índice z alto para que esté encima de otros elementos */
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 80px; /* Altura del header */
+        left: 15px;
+        width: 100%;
+        background-color: rgba(10, 25, 47, 0.9);
+        z-index: 1000;
     }
 
     .menu-toggle {
-        display: flex; /* Mostrar el botón de menú en pantallas pequeñas */
-        z-index: 1000; /* Índice z alto para que esté encima de otros elementos */
-        position: absolute; /* Posicionamiento absoluto */
-        right: 15px; /* Posición horizontal */
+        display: flex;
+        z-index: 1000;
+        position: absolute;
+        right: 15px;
     }
 
     .about-content {
-        flex-direction: column; /* Ordena los elementos verticalmente */
+        flex-direction: column;
     }
 
     .about-image {
-        margin-top: 30px; /* Espacio superior */
+        margin-top: 30px;
     }
 
     .section-title::after {
-        width: 100px; /* Ancho de la línea */
+        width: 100px;
     }
 }
 
 /* Estilos responsive para pantallas menores a 480px */
 @media (max-width: 480px) {
     .hero h2 {
-        font-size: 40px; /* Tamaño de la fuente */
+        font-size: 40px;
     }
 
     .hero p {
-        font-size: 18px; /* Tamaño de la fuente */
+        font-size: 18px;
     }
 
     .section {
-        padding: 60px 0; /* Espacio interior */
+        padding: 60px 0;
     }
 
     .section-title {
-        font-size: 28px; /* Tamaño de la fuente */
+        font-size: 28px;
     }
 
     .section-title::after {
-        display: none; /* Ocultar la línea */
+        display: none;
     }   
 }
 
 /* Estilos responsive para pantallas menores a 400px */
 @media(max-width: 400px) {
     body {
-        margin: 0px; /* Eliminar márgenes */
-        padding: 10px; /* Espacio interior */
+        margin: 0px;
+        padding: 10px;
     }
 }
 /* Estilos para el efecto de cursor personalizado */
 .cursor {
-    position: fixed; /* Posición fija en la pantalla */
-    width: 20px; /* Ancho del cursor */
-    height: 20px; /* Alto del cursor */
-    border: 2px solid rgba(100, 255, 218, 0.8); /* Borde */
-    border-radius: 50%; /* Bordes redondeados */
-    pointer-events: none; /* Evitar que el cursor interfiera con otros elementos */
-    transform: translate(-50%, -50%); /* Centra el cursor */
-    z-index: 9999; /* Índice z alto para que esté encima de otros elementos */
-    transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease; /* Transición suave para las animaciones */
-    mix-blend-mode: difference; /* Modo de mezcla */
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba(100, 255, 218, 0.8);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: transform 0.15s ease, width 0.2s ease, height 0.2s ease;
+    mix-blend-mode: difference;
 }
 
 /* Estilos para el efecto de cursor personalizado */
 .cursor-follower {
-    position: fixed; /* Posición fija en la pantalla */
-    width: 40px; /* Ancho del cursor */
-    height: 40px; /* Alto del cursor */
-    background-color: var(--primary-color); /* Color de fondo */
-    border-radius: 50%; /* Bordes redondeados */
-    pointer-events: none; /* Evitar que el cursor interfiera con otros elementos */
-    transform: translate(-50%, -50%); /* Centra el cursor */
-    z-index: 9998; /* Índice z alto para que esté encima de otros elementos */
-    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease; /* Transición suave para las animaciones */
-    mix-blend-mode: difference; /* Modo de mezcla */
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9998;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+    mix-blend-mode: difference;
 }
 
 /* Estilos para los estados interactivos del cursor */
 .hover-cursor-effect {
-    transform: translate(-50%, -50%) scale(1.5); /* Transformación al pasar el ratón */
-    background-color: var(--primary-color); /* Color de fondo */
-    border: none; /* Sin borde */
+    transform: translate(-50%, -50%) scale(1.5);
+    background-color: var(--primary-color);
+    border: none;
 }
 
 /* Estilos para los estados interactivos del cursor */
 .hover-cursor-effect-follower {
-    transform: translate(-50%, -50%) scale(0.5); /* Transformación al pasar el ratón */
-    background-color: rgba(100, 255, 218, 0.8); /* Color de fondo con transparencia */
+    transform: translate(-50%, -50%) scale(0.5);
+    background-color: rgba(100, 255, 218, 0.8);
 }
 
 /* Ocultar cursor nativo del navegador */
 html.has-custom-cursor,
 html.has-custom-cursor * {
-    cursor: none !important; /* Ocultar el cursor nativo */
+    cursor: none !important;
 }
