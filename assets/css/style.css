@@ -242,7 +242,7 @@ nav ul li a.active {
 /* Contenedor de las diapositivas */
 .slides {
     display: flex; /* Permite usar flexbox para el diseño */
-    width: 600%; /* Ancho del contenedor de diapositivas (6 veces el ancho de una diapositiva) */
+    width: 800%; /* Actualizado para 8 slides (8 veces el ancho de una diapositiva) */
     height: 100%; /* Alto completo */
     transition: transform 0.5s ease-in-out; /* Transición suave para las animaciones */
 }
